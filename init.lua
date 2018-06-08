@@ -1,29 +1,14 @@
-local module = {
---[=[
-    _NAME        = 'mjolnir._asm.compat_51',
-    _VERSION     = 'the 2nd digit of Pi/0',
-    _URL         = 'https://github.com/asmagill/mjolnir_asm.compat_51',
-    _LICENSE     = [[ See README.md ]]
-    _DESCRIPTION = [[
-    
 --- === mjolnir._asm.compat_51 ===
 ---
 --- Home: https://github.com/asmagill/mjolnir_asm.compat_51
 ---
---- The Lua 5.2 engine included with [Mjolnir](http://mjolnir.io) does not include the
---- Lua 5.1 deprecated functions in it's build.  I actually agree with this because new
---- code should be written to a current standard and updates should be encouraged.
+--- The Lua 5.2 engine included with [Mjolnir](http://mjolnir.io) does not include the Lua 5.1 deprecated functions in it's build.  I actually agree with this because new code should be written to a current standard and updates should be encouraged.
 --- 
---- However, this is not always possible, and many modules exist which *almost* work
---- under Lua 5.2, but just need a few supporting functions to continue to be viable.
+--- However, this is not always possible, and many modules exist which *almost* work under Lua 5.2, but just need a few supporting functions to continue to be viable.
 --- 
---- Here I have attempted to replicate the compatibility functions within the Lua 5.2.3
---- source code as a separate module so that they can be added as needed, and removed
---- when not.  This code is almost entirely from the Lua 5.2.3 source 
---- (http://www.lua.org/download.html) and is just packaged for convenience.
+--- Here I have attempted to replicate the compatibility functions within the Lua 5.2.3 source code as a separate module so that they can be added as needed, and removed when not. This code is almost entirely from the Lua 5.2.3 source (http://www.lua.org/download.html) and is just packaged for convenience.
 --- 
---- The following Lua 5.1 functions and variables are "created" when the `enable`
---- function is invoked:
+--- The following Lua 5.1 functions and variables are "created" when the `enable` function is invoked:
 --- 
 --- * loadstring(*string* [, *chunk*])
 --- * math.log10(*number*)
@@ -35,16 +20,8 @@ local module = {
 --- 
 --- See (http://www.lua.org/manual/5.2/manual.html#8) for more details.
 
-    ]],
---]=]
-}
-
-local mjolnir_mod_name = "_asm.compat_51"
-local c_library = "internal"
-
--- integration with C functions ------------------------------------------
-
-local lua51 = require("mjolnir."..mjolnir_mod_name.."."..c_library)
+local module = {}
+local lua51 = require("mjolnir._asm.compat_51.internal")
 
 -- private variables and methods -----------------------------------------
 
