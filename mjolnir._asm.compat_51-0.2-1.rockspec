@@ -10,7 +10,7 @@ package = "mjolnir._asm.compat_51"
 --    changing the module's source code.
 --
 --    Note: the version must match the version in the filename.
-version = "0.1-1"
+version = "0.2-1"
 
 -- General metadata:
 
@@ -19,7 +19,7 @@ local desc = "Provide Lua 5.1 compatibility functions in Mjolnir"
 
 -- LuaDist source
 source = {
-  tag = "0.1-1",
+  tag = "0.2-1",
   url = "git://github.com/LuaDist-testing/mjolnir._asm.compat_51.git"
 }
 -- Original source
